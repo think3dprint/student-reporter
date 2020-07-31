@@ -31,7 +31,7 @@ I will give you a file with following contraints:
 You are to write a C program that when compiled, will be executed in the following manner:	
 	
 
-	$ ./<name of exe> data/class1grades.txt
+	$ ./<name of exe> class1grades.txt
 	
 	There are 8 students in the class.
 
