@@ -5,13 +5,13 @@
 int main(int argc, char *argv[]){
 	if (argc > 2){
 		FILE *grades;
-		char arrayGrades[1000];
+		char *arrayGrades[1000];
 		int numGrades = 0, n;
 		grades = fopen("argv[1]", "r");
 		
 		if(grades == NULL){
 			printf("Error! could not open file.\n");
-			exit(-1);
+			return(-1);
 		}
 		else{
 			printf("code would execute.\n");
