@@ -11,7 +11,7 @@ float average(float arrayGrades){
 	float average = float sum / numberTotal;
 	return float average;
 }
-
+/*
 float min(float arrayGrades[]){
 	int m;
 	char *min = arrayGrades[1];
@@ -33,12 +33,12 @@ float max(float arrayGrades[]){
 	}
 	return float max;
 } 
-
+*/
 int main(int argc, char *argv[]){
 	if (argc > 2){
 		char *arrayGrades[1001];
 		int numGrades = 0, numberTotal;
-		FILE *grades = fopen("argv[1]", "r");
+		FILE *grades = fopen("/data/argv[1]", "r");
 		
 		if(grades == NULL){
 			printf("Error! could not open file.\n");
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
 			fgets(arrayGrades[], 1001, grades);
 			grades = numberTotal;
 			fgets(arrayGrades[], 1001, grades);
-			float 
+			printf("array = %s\n",arrayGrades);
 			}
 
 	}
