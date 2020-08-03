@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
 	if (argc > 1){
 		char *arrayGrades[1000];
 		int numGrades = 0;
-		FILE *grades = fopen("C:/first-c-project/student-reporter/data/argv[1]", "r");
+		FILE *grades = fopen(data/argv[1], "r");
 		
 		if(grades == NULL){
 			printf("Error! could not open file.\n");
