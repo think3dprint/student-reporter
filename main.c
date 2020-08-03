@@ -37,8 +37,13 @@ float max(float arrayGrades[]){
 int main(int argc, char *argv[]){
 	if (argc > 1){
 		char *arrayGrades[1000];
+		char fileName[20], dir[20];
 		int numGrades = 0;
-		FILE *grades = fopen(data/argv[1], "r");
+		strcpy(fileName, "argv[1]");
+		strcpy(dir, "data/");
+		//strcat(dir, fileName);
+		printf("%s\n", fileName);
+		FILE *grades = fopen(dir, "r");
 		
 		if(grades == NULL){
 			printf("Error! could not open file.\n");
@@ -47,7 +52,7 @@ int main(int argc, char *argv[]){
 		else{
 			//printf("code would execute.\n");
 			fgets(arrayGrades[1000], 1000,  grades);
-			numGrades = atoi(grades);
+			numGrades = atoi(arrayGrades[0]);
 			//fgets(arrayGrades[1000], 1000, grades);
 			printf("total grades = %d.1f\n",numGrades);
 			}
