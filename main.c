@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
 	if (argc > 1)
 		{
-		char *arrayGrades[1000];
+		char arrayGrades[1000];
 		char dir[20];
 		int numGrades = 0;
 		strcpy(dir, "data/");
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			//printf("code would execute.\n");
-			fgets(arrayGrades[1000], 1000,  grades);
+			fgets(arrayGrades, 1000,  grades);
 			numGrades = atoi(arrayGrades[0]);
 			//fgets(arrayGrades[1000], 1000, grades);
 			printf("total grades = %d\n",numGrades);
