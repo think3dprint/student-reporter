@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 		int numGrades = 0;
 		strcpy(dir, "data/");
 		strcat(dir, argv[1]);
-		FILE *grades = fopen(dir, "r");
+		FILE *grades = fopen(dir, "r");		//grades is a FILE pointer
 		
 		if(grades == NULL)
 		{
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			//printf("code would execute.\n");
-			fgets(arrayGrades, 1000,  grades);
+			fgets(arrayGrades, 1000,  grades);		//
 			numGrades = atoi(arrayGrades[0]);
 			//fgets(arrayGrades[1000], 1000, grades);
 			printf("total grades = %d\n",numGrades);
