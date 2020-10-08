@@ -38,12 +38,14 @@ int main(int argc, char *argv[])
 {
 	if (argc > 1)
 		{
-		char arrayGrades[1000];
+		char arrayGrades[1000];		//array of chars 
+		char *array;				//pointer to array of chars
+		array = arrayGrades;		//assiging pointer to static array
 		char dir[20];
 		int numGrades = 0;
 		strcpy(dir, "data/");
 		strcat(dir, argv[1]);
-		FILE *grades = fopen(dir, "r");		//grades is a FILE pointer
+		FILE *grades = fopen(dir, "r");		//grades is a FILE pointer to the stream
 		
 		if(grades == NULL)
 		{
@@ -52,10 +54,10 @@ int main(int argc, char *argv[])
 		else
 		{
 			//printf("code would execute.\n");
-			fgets(arrayGrades, 1000,  grades);		//
-			numGrades = atoi(arrayGrades[0]);
+			fgets(array, 1000, grades);				//if problem is here, check *grades
+			numGrades = atoi(arrayGrades[0]);		//seg fault probally occurs here
 			//fgets(arrayGrades[1000], 1000, grades);
-			printf("total grades = %d\n",numGrades);
+			printf("total grades = %d\n",numGrades);	//should return first char of file
 		}
 
 		}
