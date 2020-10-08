@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
 	if (argc > 1)
 		{
-		char arrayGrades[1000];		//array of chars 
+		char arrayGrades[1001];		//array of chars 
 		char *array;				//pointer to array of chars
 		array = arrayGrades;		//assiging pointer to static array
 		char dir[20];
@@ -54,8 +54,8 @@ int main(int argc, char *argv[])
 		else
 		{
 			//printf("code would execute.\n");
-			fgets(array, 1000, grades);				//if problem is here, check *grades
-			numGrades = atoi(arrayGrades[0]);		//seg fault probally occurs here
+			fgets(array, 1001, grades);					//if problem is here, check *grades
+			numGrades = atoi(array[0]);					//seg fault probally occurs here
 			//fgets(arrayGrades[1000], 1000, grades);
 			printf("total grades = %d\n",numGrades);	//should return first char of file
 		}
