@@ -54,10 +54,10 @@ int main(int argc, char *argv[])
 		else
 		{
 			//printf("code would execute.\n");
-			fgets(array, 1001, grades);					//if problem is here, check *grades
+			fgets(array, 1001, grades);					//reads from grades and stores in string array
 			numGrades = atoi(array[0]);					//seg fault probally occurs here
-			//fgets(arrayGrades[1000], 1000, grades);
-			printf("total grades = %d\n",numGrades);	//should return first char of file
+			printf("total grades = %d\n", numGrades);
+			//printf("total grades = %d\n",numGrades);	//should return first char of file
 		}
 
 		}
